@@ -12,17 +12,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products",
-					"protocol": "https",
+					"raw": "{{url}}/products",
 					"host": [
-						"s99zc34zr4",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
+						"{{url}}"
 					],
 					"path": [
-						"dev",
 						"products"
 					]
 				}
@@ -35,17 +29,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products/:name",
-					"protocol": "https",
+					"raw": "{{url}}/products/:name",
 					"host": [
-						"s99zc34zr4",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
+						"{{url}}"
 					],
 					"path": [
-						"dev",
 						"products",
 						":name"
 					],
@@ -66,7 +54,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"_id\":6,\r\n    \"name\":\"karpuz\",\r\n    \"price\": 7.5\r\n}",
+					"raw": "{\r\n    \"name\":\"aaayva\",\r\n    \"price\": 26\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,17 +62,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products",
-					"protocol": "https",
+					"raw": "{{url}}/products",
 					"host": [
-						"s99zc34zr4",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
+						"{{url}}"
 					],
 					"path": [
-						"dev",
 						"products"
 					],
 					"query": [
@@ -105,20 +87,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n        \"_id\": 6,\n        \"price\": 7.5,\n        \"name\": \"karpuz\"\n    }"
 				},
 				"url": {
-					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products/object/:name/:price",
-					"protocol": "https",
+					"raw": "{{url}}/products/object/:name/:price",
 					"host": [
-						"s99zc34zr4",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
+						"{{url}}"
 					],
 					"path": [
-						"dev",
 						"products",
 						"object",
 						":name",
@@ -134,11 +110,11 @@
 					"variable": [
 						{
 							"key": "name",
-							"value": "karpuzzzz"
+							"value": "test"
 						},
 						{
 							"key": "price",
-							"value": "7.5"
+							"value": "25"
 						}
 					]
 				}
@@ -152,7 +128,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"_id\": 1,\r\n        \"price\": 7,\r\n        \"name\": \"karpuzzzz\"\r\n    }",
+					"raw": "{\r\n        \"_id\": 1,\r\n        \"price\": 256,\r\n        \"name\": \"karpuzzzz\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -160,17 +136,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products",
-					"protocol": "https",
+					"raw": "{{url}}/products",
 					"host": [
-						"s99zc34zr4",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
+						"{{url}}"
 					],
 					"path": [
-						"dev",
 						"products"
 					],
 					"query": [
@@ -183,6 +153,33 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev",
+			"type": "string"
 		}
 	]
 }

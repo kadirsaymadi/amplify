@@ -1,0 +1,22 @@
+{
+  "resourceName": "productsDynamo",
+  "tableName": "productsDynamo",
+  "partitionKey": {
+    "fieldName": "name",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "price",
+    "fieldType": "number"
+  },
+  "gsi": [
+    {
+      "name": "nameGSI",
+      "partitionKey": {
+        "fieldName": "name",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}

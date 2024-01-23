@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "745c4be3-c1b8-4e0c-8abc-f106e40a39f4",
+		"name": "Amplify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4578145"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products",
+					"protocol": "https",
+					"host": [
+						"s99zc34zr4",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products/:name",
+					"protocol": "https",
+					"host": [
+						"s99zc34zr4",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"products",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "karpuz"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":6,\r\n    \"name\":\"karpuz\",\r\n    \"price\": 7.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products",
+					"protocol": "https",
+					"host": [
+						"s99zc34zr4",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products/object/:name/:price",
+					"protocol": "https",
+					"host": [
+						"s99zc34zr4",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"products",
+						"object",
+						":name",
+						":price"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "karpuzzzz"
+						},
+						{
+							"key": "price",
+							"value": "7.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"_id\": 1,\r\n        \"price\": 7,\r\n        \"name\": \"karpuzzzz\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://s99zc34zr4.execute-api.us-east-1.amazonaws.com/dev/products",
+					"protocol": "https",
+					"host": [
+						"s99zc34zr4",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
